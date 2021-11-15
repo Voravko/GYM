@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E2972BA-55AE-4224-964E-722BDFD8F216}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Проект</RootNamespace>
+    <AssemblyName>Проект</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.26\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="S22.Imap">
+      <HintPath>..\..\..\..\Downloads\Новая папка\S22.Imap.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Words.NET">
+      <HintPath>bin\Debug\Xceed.Words.NET (1)\Xceed.Words.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abonement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="abonement.Designer.cs">
+      <DependentUpon>abonement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="abonement_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="abonement_main.Designer.cs">
+      <DependentUpon>abonement_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTrenercs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTrenercs.Designer.cs">
+      <DependentUpon>addTrenercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_abon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_abon.Designer.cs">
+      <DependentUpon>add_abon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_klient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_klient.Designer.cs">
+      <DependentUpon>add_klient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Date_klient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Date_klient.Designer.cs">
+      <DependentUpon>Date_klient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete.Designer.cs">
+      <DependentUpon>delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteKl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteKl.Designer.cs">
+      <DependentUpon>deleteKl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete_Ab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete_Ab.Designer.cs">
+      <DependentUpon>delete_Ab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="doc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="doc.Designer.cs">
+      <DependentUpon>doc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="first.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="first.Designer.cs">
+      <DependentUpon>first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inf.Designer.cs">
+      <DependentUpon>inf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="klient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="klient.Designer.cs">
+      <DependentUpon>klient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainmenu.Designer.cs">
+      <DependentUpon>mainmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nado.Designer.cs">
+      <DependentUpon>nado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="raspisanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="raspisanie.Designer.cs">
+      <DependentUpon>raspisanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reg.Designer.cs">
+      <DependentUpon>reg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trener.Designer.cs">
+      <DependentUpon>Trener.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="abonement.resx">
+      <DependentUpon>abonement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="abonement_main.resx">
+      <DependentUpon>abonement_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTrenercs.resx">
+      <DependentUpon>addTrenercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_abon.resx">
+      <DependentUpon>add_abon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_klient.resx">
+      <DependentUpon>add_klient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Date_klient.resx">
+      <DependentUpon>Date_klient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete.resx">
+      <DependentUpon>delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteKl.resx">
+      <DependentUpon>deleteKl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete_Ab.resx">
+      <DependentUpon>delete_Ab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doc.resx">
+      <DependentUpon>doc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="first.resx">
+      <DependentUpon>first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inf.resx">
+      <DependentUpon>inf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="klient.resx">
+      <DependentUpon>klient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainmenu.resx">
+      <DependentUpon>mainmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="raspisanie.resx">
+      <DependentUpon>raspisanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reg.resx">
+      <DependentUpon>reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trener.resx">
+      <DependentUpon>Trener.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <None Include="Properties\Resources\тренер%28удаление1%291.jpg" />
+    <None Include="Properties\Resources\тренер%28удаление1%29.jpg" />
+    <None Include="Properties\Resources\тренер%28расписание1%291.jpg" />
+    <None Include="Properties\Resources\тренер%28расписание1%29.jpg" />
+    <None Include="Properties\Resources\тренер%28добавление111.jpg" />
+    <None Include="Properties\Resources\пав.jpg" />
+    <None Include="Properties\Resources\клиенты.jpg" />
+    <None Include="Properties\Resources\Без имени-7776.jpg" />
+    <None Include="Properties\Resources\Без имени-4.jpg" />
+    <None Include="Properties\Resources\Без имени-3.jpg" />
+    <None Include="Properties\Resources\Без имени-21.jpg" />
+    <None Include="Properties\Resources\Без имени-2.png" />
+    <None Include="Properties\Resources\Без имени-2.jpg" />
+    <None Include="Properties\Resources\Без имени-13.jpg" />
+    <None Include="Properties\Resources\Без имени-12.jpg" />
+    <None Include="Properties\Resources\Без имени-11.png" />
+    <None Include="Properties\Resources\Без имени-11.jpg" />
+    <None Include="Properties\Resources\Без имени-1.png" />
+    <None Include="Properties\Resources\Без имени-1.jpg" />
+    <None Include="Properties\Resources\Без имени-0.jpg" />
+    <None Include="Properties\Resources\Абонемент1.jpg" />
+    <None Include="Properties\Resources\абонемент.jpg" />
+    <None Include="Properties\Resources\Абонемент%28добавление1%29.jpg" />
+    <None Include="Properties\Resources\Абонемент%28добавление%29.jpg" />
+    <None Include="Properties\Resources\абонемент%28все%29.jpg" />
+    <None Include="Properties\Resources\tr.jpg" />
+    <None Include="Properties\Resources\tq_tick_cross1.jpg" />
+    <None Include="Properties\Resources\tq_tick_cross1.gif" />
+    <None Include="Properties\Resources\tq_tick_cross.jpg" />
+    <None Include="Properties\Resources\tq_tick_cross.gif" />
+    <None Include="Properties\Resources\t12.jpg" />
+    <None Include="Properties\Resources\t11.jpg" />
+    <None Include="Properties\Resources\t1.jpg" />
+    <None Include="Properties\Resources\shutdown-vector-icon.jpg" />
+    <None Include="Properties\Resources\rkbtyn%28добавление%291.jpg" />
+    <None Include="Properties\Resources\REG.jpg" />
+    <None Include="Properties\Resources\pngtree-arrow-icon-in-flat-style-arrow-symbol-web-design-logo-png-image_3548330.jpg" />
+    <None Include="Properties\Resources\png-clipart-fitness-centre-physical-fitness-logo-dumbbell-text-trademark.png" />
+    <None Include="Properties\Resources\photo_e9a3m.jpg" />
+    <None Include="Properties\Resources\photo_898sj.jpg" />
+    <None Include="Properties\Resources\otch2.jpg" />
+    <None Include="Properties\Resources\otch1.jpg" />
+    <None Include="Properties\Resources\otch.jpg" />
+    <None Include="Properties\Resources\originate-animated-logo1.gif" />
+    <None Include="Properties\Resources\originate-animated-logo.jpg" />
+    <None Include="Properties\Resources\originate-animated-logo.gif" />
+    <None Include="Properties\Resources\n.gif" />
+    <None Include="Properties\Resources\menu.jpg" />
+    <None Include="Properties\Resources\lala.png" />
+    <None Include="Properties\Resources\k12.jpg" />
+    <None Include="Properties\Resources\k11.jpg" />
+    <None Include="Properties\Resources\k1.jpg" />
+    <None Include="Properties\Resources\img_71557.png" />
+    <None Include="Properties\Resources\cross-mark-304374_1280.png" />
+    <None Include="Properties\Resources\check-in.jpg" />
+    <None Include="Properties\Resources\check-in.gif" />
+    <None Include="Properties\Resources\bda32f6f3581b5f4402d2718132f5ce61.gif" />
+    <None Include="Properties\Resources\bda32f6f3581b5f4402d2718132f5ce6.jpg" />
+    <None Include="Properties\Resources\bda32f6f3581b5f4402d2718132f5ce6.gif" />
+    <None Include="Properties\Resources\ab13.jpg" />
+    <None Include="Properties\Resources\ab12.jpg" />
+    <None Include="Properties\Resources\ab11.jpg" />
+    <None Include="Properties\Resources\ab1.jpg" />
+    <None Include="Properties\Resources\850c1fd3cc71834d9945bc28562b13f5.jpg" />
+    <None Include="Properties\Resources\850c1fd3cc71834d9945bc28562b13f5.gif" />
+    <None Include="Properties\Resources\5348024575195329_77b2.jpg" />
+    <None Include="Properties\Resources\5348024575195321_c2a8.jpg" />
+    <None Include="Properties\Resources\1b571c13270cf2f4daac91a93a864a101.gif" />
+    <None Include="Properties\Resources\1b571c13270cf2f4daac91a93a864a10.gif" />
+    <None Include="Properties\Resources\19e3c57fd943c051fac4ccd3b3e70da7.png" />
+    <None Include="Properties\Resources\16IA7JOB5K342C9T.jpeg" />
+    <None Include="Properties\Resources\1625148335_15-kartinkin-com-p-sport-art-art-krasivo-16 %281%292.jpg" />
+    <None Include="Properties\Resources\1625148335_15-kartinkin-com-p-sport-art-art-krasivo-16 %281%291.jpg" />
+    <None Include="Properties\Resources\1625148335_15-kartinkin-com-p-sport-art-art-krasivo-16 %281%29.jpg" />
+    <None Include="Properties\Resources\1616415027_13-p-fon-gradient-13.jpg" />
+    <None Include="Properties\Resources\1612684516_122-p-znachki-na-zelenom-fone-179.png" />
+    <None Include="Properties\Resources\1612480566_187-p-strelka-na-serom-fone-241.png" />
+    <None Include="Properties\Resources\1234.gif" />
+    <None Include="Resources\Абонемент1.jpg" />
+    <None Include="Resources\Без имени-0.jpg" />
+    <None Include="Resources\1616415027_13-p-fon-gradient-13.jpg" />
+    <None Include="Resources\rkbtyn%28добавление%291.jpg" />
+    <None Include="Resources\тренер%28удаление1%291.jpg" />
+    <None Include="Resources\Абонемент%28добавление1%29.jpg" />
+    <None Include="Resources\абонемент%28все%29.jpg" />
+    <None Include="Resources\тренер%28удаление1%29.jpg" />
+    <None Include="Resources\тренер%28добавление111.jpg" />
+    <None Include="Resources\тренер%28расписание1%291.jpg" />
+    <None Include="Resources\тренер%28расписание1%29.jpg" />
+    <None Include="Resources\пав.jpg" />
+    <None Include="Resources\19e3c57fd943c051fac4ccd3b3e70da7.png" />
+    <None Include="Resources\1612684516_122-p-znachki-na-zelenom-fone-179.png" />
+    <None Include="Resources\img_71557.png" />
+    <None Include="Resources\pngtree-arrow-icon-in-flat-style-arrow-symbol-web-design-logo-png-image_3548330.jpg" />
+    <None Include="Resources\lala.png" />
+    <None Include="Resources\1612480566_187-p-strelka-na-serom-fone-241.png" />
+    <None Include="Resources\photo_e9a3m.jpg" />
+    <None Include="Resources\5348024575195321_c2a8.jpg" />
+    <None Include="Resources\5348024575195329_77b2.jpg" />
+    <None Include="Resources\Без имени-13.jpg" />
+    <None Include="Resources\photo_898sj.jpg" />
+    <None Include="Resources\850c1fd3cc71834d9945bc28562b13f5.gif" />
+    <None Include="Resources\850c1fd3cc71834d9945bc28562b13f5.jpg" />
+    <None Include="Resources\otch2.jpg" />
+    <None Include="Resources\ab13.jpg" />
+    <None Include="Resources\k12.jpg" />
+    <None Include="Resources\t12.jpg" />
+    <None Include="Resources\Без имени-12.jpg" />
+    <None Include="Resources\Без имени-11.jpg" />
+    <None Include="Resources\Абонемент%28добавление%29.jpg" />
+    <None Include="Resources\otch1.jpg" />
+    <None Include="Resources\otch.jpg" />
+    <None Include="Resources\ab12.jpg" />
+    <None Include="Resources\ab11.jpg" />
+    <None Include="Resources\ab1.jpg" />
+    <None Include="Resources\k11.jpg" />
+    <None Include="Resources\k1.jpg" />
+    <None Include="Resources\t11.jpg" />
+    <None Include="Resources\t1.jpg" />
+    <None Include="Resources\tr.jpg" />
+    <None Include="Resources\menu.jpg" />
+    <None Include="Resources\shutdown-vector-icon.jpg" />
+    <None Include="Resources\cross-mark-304374_1280.png" />
+    <None Include="Resources\tq_tick_cross1.gif" />
+    <None Include="Resources\tq_tick_cross1.jpg" />
+    <None Include="Resources\tq_tick_cross.jpg" />
+    <None Include="Resources\tq_tick_cross.gif" />
+    <None Include="Resources\1234.gif" />
+    <None Include="Resources\bda32f6f3581b5f4402d2718132f5ce61.gif" />
+    <None Include="Resources\bda32f6f3581b5f4402d2718132f5ce6.jpg" />
+    <None Include="Resources\bda32f6f3581b5f4402d2718132f5ce6.gif" />
+    <None Include="Resources\originate-animated-logo1.gif" />
+    <None Include="Resources\Без имени-11.png" />
+    <None Include="Resources\png-clipart-fitness-centre-physical-fitness-logo-dumbbell-text-trademark.png" />
+    <None Include="Resources\originate-animated-logo.jpg" />
+    <None Include="Resources\16IA7JOB5K342C9T.jpeg" />
+    <None Include="Resources\originate-animated-logo.gif" />
+    <None Include="Resources\1b571c13270cf2f4daac91a93a864a101.gif" />
+    <None Include="Resources\1b571c13270cf2f4daac91a93a864a10.gif" />
+    <None Include="Resources\check-in.jpg" />
+    <None Include="Resources\n.gif" />
+    <None Include="Resources\check-in.gif" />
+    <None Include="Resources\REG.jpg" />
+    <None Include="Resources\Без имени-7776.jpg" />
+    <None Include="Resources\Без имени-1.jpg" />
+    <None Include="Resources\1625148335_15-kartinkin-com-p-sport-art-art-krasivo-16 %281%292.jpg" />
+    <None Include="Resources\1625148335_15-kartinkin-com-p-sport-art-art-krasivo-16 %281%291.jpg" />
+    <None Include="Resources\1625148335_15-kartinkin-com-p-sport-art-art-krasivo-16 %281%29.jpg" />
+    <None Include="Resources\абонемент.jpg" />
+    <None Include="Resources\клиенты.jpg" />
+    <None Include="Resources\Без имени-4.jpg" />
+    <None Include="Resources\Без имени-3.jpg" />
+    <None Include="Resources\Без имени-21.jpg" />
+    <None Include="Resources\Без имени-2.png" />
+    <None Include="Resources\Без имени-2.jpg" />
+    <None Include="Resources\Без имени-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
