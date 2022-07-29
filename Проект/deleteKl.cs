@@ -81,7 +81,7 @@ namespace Проект
 
                 MessageBox.Show(command.ExecuteNonQuery().ToString());
                 pictureBox3.Visible = true;
-                label3.Visible = true;
+                //label3.Visible = true;
 
             }
             else
@@ -110,18 +110,18 @@ namespace Проект
         {
             pictureBox3.Visible = false;
             comboBox1.SelectedIndex = -1;
-            label3.Visible = false;
+            //label3.Visible = false;
 
         }
 
         private void label3_MouseEnter(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.Gray;
+           // label3.ForeColor = Color.Gray;
         }
 
         private void label3_MouseLeave(object sender, EventArgs e)
         {
-            label3.ForeColor = Color.White;
+           // label3.ForeColor = Color.White;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -138,7 +138,8 @@ namespace Проект
 
                 MessageBox.Show(command.ExecuteNonQuery().ToString());
                 pictureBox3.Visible = true;
-                label3.Visible = true;
+                //label3.Visible = true;
+                timer1.Enabled = true;
 
             }
             else
@@ -157,6 +158,9 @@ namespace Проект
             }
         }
 
-        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBox3.Visible = false;
+        }
     }
 }

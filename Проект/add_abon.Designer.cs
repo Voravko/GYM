@@ -50,6 +50,7 @@ namespace Проект
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -194,6 +195,7 @@ namespace Проект
             this.panel1.Size = new System.Drawing.Size(221, 45);
             this.panel1.TabIndex = 11;
             this.panel1.Click += new System.EventHandler(this.panel1_Click);
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label8
             // 
@@ -205,6 +207,7 @@ namespace Проект
             this.label8.Size = new System.Drawing.Size(162, 34);
             this.label8.TabIndex = 12;
             this.label8.Text = "ДОБАВИТЬ";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel2
             // 
@@ -229,6 +232,7 @@ namespace Проект
             // 
             // pictureBox3
             // 
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(1135, 528);
             this.pictureBox3.Name = "pictureBox3";
@@ -300,12 +304,27 @@ namespace Проект
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.Click += new System.EventHandler(this.textBox3_Click);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Black;
+            this.label22.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.ForeColor = System.Drawing.Color.Maroon;
+            this.label22.Location = new System.Drawing.Point(828, 301);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(358, 23);
+            this.label22.TabIndex = 37;
+            this.label22.Text = "В ЗНАЧЕНИИ НЕ МОЖЕТ БЫТЬ НОЛЬ";
+            this.label22.Visible = false;
+            // 
             // add_abon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1480, 750);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label20);
@@ -363,5 +382,6 @@ namespace Проект
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label22;
     }
 }

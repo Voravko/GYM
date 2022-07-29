@@ -29,6 +29,7 @@ namespace Проект
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(deleteKl));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,8 +39,8 @@ namespace Проект
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -137,21 +138,6 @@ namespace Проект
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(893, 613);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "УДАЛИТЬ ЕЩЁ";
-            this.label3.Visible = false;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -164,6 +150,11 @@ namespace Проект
             this.label5.Text = "ПУСТОЕ ПОЛЕ УДАЛЯТЬ НЕЛЬЗЯ";
             this.label5.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 3200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // deleteKl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -171,7 +162,6 @@ namespace Проект
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1462, 703);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
@@ -201,7 +191,7 @@ namespace Проект
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Timer timer1;
     }
 }

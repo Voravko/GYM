@@ -19,14 +19,16 @@ namespace Проект
             InitializeComponent();
             Size = new Size(1510, 837);
             pictureBox1.Size = new Size(1510, 837);
-            panel1.Size = new Size(43, 51);
+            panel1.Size = new Size(250, 44);
             label1.Location = new Point(1223, 209); //1185; 275
             label2.Location = new Point(1223, 417); //1185; 275
             label3.Location = new Point(1223,657); //1185; 275
             label4.Location = new Point(1466, 9); //1185; 275
             panel1.Location = new Point(0, 0); //1185; 275
 
-            label5.Location = new Point(52, 6); //1185; 275
+            label5.Location = new Point(60, 5); //1185; 275// 52; 6
+            label5.Size = new Size(240, 40); //1185; 275// 52; 6
+
 
 
 

@@ -67,7 +67,8 @@ namespace Проект
             if (c1)
             {
                 label3.Visible = false;
-                label5.Visible = true;
+                //label5.Visible = true;
+                timer1.Enabled = true;
 
                 sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database1"].ConnectionString);
                 sqlCon.Open();
@@ -116,8 +117,13 @@ namespace Проект
         {
             pictureBox4.Visible = false;
             comboBox1.SelectedIndex = -1;
-            label5.Visible = false;
+            //label5.Visible = false;
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBox4.Visible = false;
         }
     }
 }

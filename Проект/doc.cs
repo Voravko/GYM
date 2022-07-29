@@ -53,6 +53,61 @@ namespace Проект
                     dataReader.Close();
                 }
             }
+
+            try
+            {
+                SqlCommand sqlCommand = new SqlCommand("SELECT abonement from [klient]", sqlCon);
+                dataReader = sqlCommand.ExecuteReader();
+                comboBox1.Items.Clear();
+
+
+                while (dataReader.Read())
+                {
+
+                    comboBox3.Items.Add(dataReader["abonement"]);
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (dataReader != null && !dataReader.IsClosed)
+                {
+                    dataReader.Close();
+                }
+            }
+            try
+            {
+                SqlCommand sqlCommand = new SqlCommand("SELECT price from [klient]", sqlCon);
+                dataReader = sqlCommand.ExecuteReader();
+                comboBox1.Items.Clear();
+
+
+                while (dataReader.Read())
+                {
+
+                    comboBox3.Items.Add(dataReader["price"]);
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (dataReader != null && !dataReader.IsClosed)
+                {
+                    dataReader.Close();
+                }
+            }
             int c = 0;
             for (int i = 0; i < comboBox2.Items.Count; i++)
             {
@@ -213,16 +268,19 @@ namespace Проект
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(dateTimePicker1==dateTimePicker2)
+            string one = dateTimePicker1.Value.ToString("dd.MM.yyyy");
+            string two = dateTimePicker2.Value.ToString("dd.MM.yyyy");
+            if (one==two)
             {
                 hg = false;
             }
             string pathDocument = AppDomain.CurrentDomain.BaseDirectory + "Отчёт.docx";
+            
 
             DocX document = DocX.Create(pathDocument);
             if (hg)
             {
-                document.InsertParagraph($"Отчёт по продажам c {Convert.ToString(dateTimePicker1)} по {Convert.ToString(dateTimePicker2)}").
+                document.InsertParagraph($"Отчёт по продажам c {one} по {two}").
 
 
                      Font("Calibri").
@@ -235,7 +293,7 @@ namespace Проект
                      Alignment = Alignment.center;
             }
             else
-                document.InsertParagraph($"Отчёт по продажам c {Convert.ToString(dateTimePicker1)} по {Convert.ToString(dateTimePicker2)}").
+                document.InsertParagraph($"Отчёт по продажам на {one} ").
 
 
                      Font("Calibri").
@@ -248,13 +306,50 @@ namespace Проект
                      Alignment = Alignment.center;
 
             document.InsertParagraph("");
+            SqlDataReader dataReade = null;
 
-            document.InsertParagraph($"Продано абонементов {label6.Text}");
+            try
+            {
+                SqlCommand sqlCommand = new SqlCommand("SELECT name, price, abonement from [klient]  WHERE  date >= @date1 AND date <= @date2", sqlCon);
+                sqlCommand.Parameters.AddWithValue("date1", dateTimePicker1.Value.ToString("MM.dd.yyyy"));
+                sqlCommand.Parameters.AddWithValue("date2", dateTimePicker2.Value.ToString("MM.dd.yyyy"));
+                dataReade = sqlCommand.ExecuteReader();
+                
+
+
+                while (dataReade.Read())
+                {
+
+                    string n = dataReade["name"].ToString();
+                    string p = dataReade["price"].ToString();
+                    string a = dataReade["abonement"].ToString();
+
+                    document.InsertParagraph($"{n} приобрел абонемент '{a}' на сумму {p}");
+
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (dataReade != null && !dataReade.IsClosed)
+                {
+                    dataReade.Close();
+                }
+            }
+            document.InsertParagraph("");
+
+            document.InsertParagraph($"Продано всего абонементов {label6.Text}");
             document.InsertParagraph($"Всего прибыли {label5.Text}");
             string s = label5.Text;
             double d = double.Parse(s);
             d = d * 0.85;
-            document.InsertParagraph($"Всего прибыли {d}");
+            document.InsertParagraph($"Прибыль с учетом налога {d}");
 
 
             document.Save();

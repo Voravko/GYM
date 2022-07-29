@@ -61,11 +61,12 @@ namespace Проект
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -185,6 +186,7 @@ namespace Проект
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(221, 34);
             this.textBox4.TabIndex = 7;
+            this.textBox4.Click += new System.EventHandler(this.label7_Click);
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             // 
@@ -198,6 +200,7 @@ namespace Проект
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(221, 34);
             this.textBox5.TabIndex = 8;
+            this.textBox5.Click += new System.EventHandler(this.label7_Click);
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
@@ -227,6 +230,7 @@ namespace Проект
             this.label5.Size = new System.Drawing.Size(143, 34);
             this.label5.TabIndex = 13;
             this.label5.Text = "ВОЗРАСТ";
+            this.label5.Click += new System.EventHandler(this.textBox2_Click);
             // 
             // label6
             // 
@@ -240,6 +244,7 @@ namespace Проект
             this.label6.Size = new System.Drawing.Size(200, 34);
             this.label6.TabIndex = 14;
             this.label6.Text = "ДОЛЖНОСТЬ";
+            this.label6.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // label7
             // 
@@ -488,18 +493,6 @@ namespace Проект
             this.comboBox3.Visible = false;
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.ImageLocation = "Resources/bda32f6f3581b5f4402d2718132f5ce62.jpg";
-            this.pictureBox3.Location = new System.Drawing.Point(1054, 513);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(249, 208);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
-            // 
             // timer1
             // 
             this.timer1.Interval = 3200;
@@ -549,15 +542,42 @@ namespace Проект
             this.label21.MouseEnter += new System.EventHandler(this.label21_MouseEnter);
             this.label21.MouseLeave += new System.EventHandler(this.label21_MouseLeave);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Black;
+            this.label22.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.ForeColor = System.Drawing.Color.Maroon;
+            this.label22.Location = new System.Drawing.Point(713, 578);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(358, 23);
+            this.label22.TabIndex = 36;
+            this.label22.Text = "В ЗНАЧЕНИИ НЕ МОЖЕТ БЫТЬ НОЛЬ";
+            this.label22.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1092, 502);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(270, 231);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 37;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            // 
             // addTrenercs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1480, 750);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label8);
@@ -634,10 +654,11 @@ namespace Проект
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

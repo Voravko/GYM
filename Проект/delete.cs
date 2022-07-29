@@ -65,7 +65,7 @@ namespace Проект
             if (c1)
             {
                 label5.Visible = false;
-                label1.Visible = true;
+                //label1.Visible = true;
 
                 sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database1"].ConnectionString);
                 sqlCon.Open();
@@ -74,7 +74,7 @@ namespace Проект
                 command.Parameters.AddWithValue("name", comboBox1.Text);
 
                 command.ExecuteNonQuery();
-
+                //label1.Visible = true;
                 timer1.Enabled = true;
                 addTrenercs a = new addTrenercs();
                 a.c--;
@@ -95,7 +95,7 @@ namespace Проект
         private void timer1_Tick(object sender, EventArgs e)
         {
             // pictureBox4.Visible = true;
-            pictureBox3.Visible = true;
+            pictureBox3.Visible = false;
 
         }
 
@@ -135,14 +135,14 @@ namespace Проект
 
         private void label1_MouseLeave(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.White;
+            //label1.ForeColor = Color.White;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             pictureBox3.Visible = false;
             comboBox1.SelectedIndex = -1;
-            label1.Visible = false;
+           // label1.Visible = false;
 
         }
 
@@ -170,7 +170,7 @@ namespace Проект
                 command.Parameters.AddWithValue("name", comboBox1.Text);
 
                 command.ExecuteNonQuery();
-
+                pictureBox3.Visible = true;
                 timer1.Enabled = true;
                 addTrenercs a = new addTrenercs();
                 a.c--;
@@ -181,7 +181,7 @@ namespace Проект
 
         private void label1_MouseEnter(object sender, EventArgs e)
         {
-            label1.ForeColor = Color.Gray;
+            //label1.ForeColor = Color.Gray;
         }
     }
 }

@@ -58,6 +58,7 @@ namespace Проект
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,9 +75,6 @@ namespace Проект
             this.label1.Size = new System.Drawing.Size(98, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "ФОТО";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
-            //this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            //this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // label2
             // 
@@ -227,7 +225,8 @@ namespace Проект
             // 
             // pictureBox3
             // 
-            //this.pictureBox3.Image = global::Проект.Properties.Resources.bda32f6f3581b5f4402d2718132f5ce62;
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(1159, 442);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(270, 231);
@@ -248,7 +247,7 @@ namespace Проект
             // 
             // pictureBox1
             // 
-            //this.pictureBox1.Image = global::Проект.Properties.Resources.rkbtyn_добавление_1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1480, 750);
@@ -412,12 +411,27 @@ namespace Проект
             this.panel2.Size = new System.Drawing.Size(125, 4);
             this.panel2.TabIndex = 37;
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Black;
+            this.label22.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.ForeColor = System.Drawing.Color.Maroon;
+            this.label22.Location = new System.Drawing.Point(764, 466);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(358, 23);
+            this.label22.TabIndex = 38;
+            this.label22.Text = "В ЗНАЧЕНИИ НЕ МОЖЕТ БЫТЬ НОЛЬ";
+            this.label22.Visible = false;
+            // 
             // add_klient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1480, 750);
+            this.Controls.Add(this.label22);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.pictureBox3);
@@ -488,5 +502,6 @@ namespace Проект
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label22;
     }
 }

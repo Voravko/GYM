@@ -224,6 +224,7 @@ namespace Проект
             this.maskedTextBox3.UseSystemPasswordChar = true;
             this.maskedTextBox3.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox3_MaskInputRejected);
             this.maskedTextBox3.Click += new System.EventHandler(this.maskedTextBox3_Click);
+            this.maskedTextBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox3_MouseClick);
             // 
             // label4
             // 
@@ -400,6 +401,7 @@ namespace Проект
             this.maskedTextBox1.TabIndex = 24;
             this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             this.maskedTextBox1.Click += new System.EventHandler(this.maskedTextBox1_Click);
+            this.maskedTextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox1_MouseClick);
             this.maskedTextBox1.Enter += new System.EventHandler(this.maskedTextBox1_Enter);
             // 
             // maskedTextBox2
@@ -417,6 +419,7 @@ namespace Проект
             this.maskedTextBox2.UseSystemPasswordChar = true;
             this.maskedTextBox2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             this.maskedTextBox2.Click += new System.EventHandler(this.label7_Click);
+            this.maskedTextBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox2_MouseClick);
             // 
             // label15
             // 

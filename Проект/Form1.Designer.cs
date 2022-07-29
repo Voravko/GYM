@@ -253,7 +253,7 @@ namespace Проект
             // 
             this.maskedTextBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox1.Enabled = false;
+            this.maskedTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.maskedTextBox1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox1.ForeColor = System.Drawing.Color.White;
             this.maskedTextBox1.Location = new System.Drawing.Point(906, 412);
@@ -262,13 +262,14 @@ namespace Проект
             this.maskedTextBox1.PromptChar = ' ';
             this.maskedTextBox1.Size = new System.Drawing.Size(490, 34);
             this.maskedTextBox1.TabIndex = 18;
-            this.maskedTextBox1.Click += new System.EventHandler(this.maskedTextBox1_Click);
+            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.maskedTextBox1.Click += new System.EventHandler(this.label5_Click);
+            this.maskedTextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox1_MouseClick);
             // 
             // maskedTextBox2
             // 
             this.maskedTextBox2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.maskedTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maskedTextBox2.Enabled = false;
             this.maskedTextBox2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maskedTextBox2.ForeColor = System.Drawing.Color.White;
             this.maskedTextBox2.Location = new System.Drawing.Point(906, 520);
@@ -278,7 +279,8 @@ namespace Проект
             this.maskedTextBox2.Size = new System.Drawing.Size(490, 34);
             this.maskedTextBox2.TabIndex = 19;
             this.maskedTextBox2.UseSystemPasswordChar = true;
-            this.maskedTextBox2.Click += new System.EventHandler(this.maskedTextBox2_Click);
+            this.maskedTextBox2.Click += new System.EventHandler(this.label6_Click);
+            this.maskedTextBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.maskedTextBox2_MouseClick);
             // 
             // Form1
             // 
@@ -307,6 +309,7 @@ namespace Проект
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

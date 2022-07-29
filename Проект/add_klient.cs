@@ -167,13 +167,16 @@ namespace Проект
         int age;
         private void label14_Click(object sender, EventArgs e)
         {
-           
+            string fs = Convert.ToString(maskedTextBox1.Text);
 
 
             if (o && t && ht && f && fa)
             {
-                age = Convert.ToInt32(maskedTextBox1.Text);
-                
+                if (!(fs.Contains("0")))
+                {
+                    label22.Visible = false;
+                    age = Convert.ToInt32(maskedTextBox1.Text);
+
                     label20.Visible = false;
                     SqlDataReader rea = null;
 
@@ -205,10 +208,10 @@ namespace Проект
                     }
                     int result = Convert.ToInt32(label12.Text) * Convert.ToInt32(comboBox2.Text);
                     label12.Text = Convert.ToString(result);
-                DateTime dateTime = DateTime.Now;
-                 
+                    DateTime dateTime = DateTime.Now;
 
-                sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database1"].ConnectionString);
+
+                    sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database1"].ConnectionString);
                     sqlCon.Open();
                     SqlCommand command = new SqlCommand(
                                    $"INSERT INTO [klient] (name,age,abonement,kolvo,price,phone,date) VALUES (@name,@age,@abonement,@kolvo,@price,@phone,@date)", sqlCon);
@@ -224,12 +227,20 @@ namespace Проект
 
 
 
-                pictureBox3.Visible = true;
+                    pictureBox3.Visible = true;
 
 
                     command.ExecuteNonQuery();
 
 
+
+                }
+                else
+                {
+                    label22.Visible = true;
+                }
+
+               
                 
             }
             else

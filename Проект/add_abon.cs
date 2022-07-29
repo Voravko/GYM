@@ -138,20 +138,27 @@ namespace Проект
 
         private void panel1_Click(object sender, EventArgs e)
         {
+            string hg =Convert.ToString( textBox2.Text);
             if (o && t && th)
             {
+                if (!(hg.Contains("0")))
+                {
 
-                sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database1"].ConnectionString);
-                sqlCon.Open();
-                SqlCommand command = new SqlCommand(
-                               $"INSERT INTO [abonement] (colled,price,trener) VALUES (@colled,@price,@trener)", sqlCon);
-                command.Parameters.AddWithValue("colled", textBox1.Text);
-                command.Parameters.AddWithValue("price", textBox2.Text);
-                command.Parameters.AddWithValue("trener", textBox3.Text);
-                pictureBox3.Visible = true;
+                    label22.Visible = false;
+                    sqlCon = new SqlConnection(ConfigurationManager.ConnectionStrings["Database1"].ConnectionString);
+                    sqlCon.Open();
+                    SqlCommand command = new SqlCommand(
+                                   $"INSERT INTO [abonement] (colled,price,trener) VALUES (@colled,@price,@trener)", sqlCon);
+                    command.Parameters.AddWithValue("colled", textBox1.Text);
+                    command.Parameters.AddWithValue("price", textBox2.Text);
+                    command.Parameters.AddWithValue("trener", textBox3.Text);
+                    pictureBox3.Visible = true;
 
 
-                command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
+                }
+                else
+                    label22.Visible = true;
             }
             else
             {
@@ -241,6 +248,16 @@ namespace Проект
 
 
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

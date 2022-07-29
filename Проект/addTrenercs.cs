@@ -158,11 +158,23 @@ namespace Проект
         private void panel2_Click(object sender, EventArgs e)
         {
             j++;
-           
+            string a;
+            string b;
+            string cd;
+            a = Convert.ToString(textBox4);
+            b = Convert.ToString(textBox5);
+            cd = Convert.ToString(textBox2);
 
-                if (o && t && ht && f && fa&&c1&&c2&&c3)
+
+
+            if (o && t && ht && f && fa&&c1&&c2&&c3)
                 {
 
+                if (!(a.Contains("0") || (b.Contains("0"))|| (cd.Contains("0"))))
+                {
+
+
+                    label22.Visible = false;
                     label20.Visible = false;
                     if (Convert.ToInt32(textBox4.Text) > Convert.ToInt32(textBox5.Text) || Convert.ToInt32(textBox4.Text) == Convert.ToInt32(textBox5.Text))
                     {
@@ -191,8 +203,8 @@ namespace Проект
                         command.Parameters.AddWithValue("day3", comboBox3.Text);
                         command.Parameters.AddWithValue("k", c);
                         c++;
-                     
-                    
+
+
 
 
 
@@ -202,6 +214,12 @@ namespace Проект
 
                     }
                 }
+                else
+                {
+                    label22.Visible = true;
+
+                }
+            }
                 else
                 {
                     label20.Visible = true;

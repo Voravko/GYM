@@ -183,9 +183,6 @@ namespace Проект
                 {
 
 
-
-
-
                     if (textBox2.Text != String.Empty)
                     {
                         t = true;
@@ -242,12 +239,6 @@ namespace Проект
                                 label12.Visible = true;
 
                             }
-
-
-
-
-
-
 
                             kod = rand.Next(100, 999);
                             if (gf)
@@ -531,6 +522,24 @@ namespace Проект
            // maskedTextBox2.SelectionStart = maskedTextBox2.TextLength - 1;
             label3.Visible = false;
             label8.Visible = true;
+        }
+
+        private void maskedTextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            ((MaskedTextBox)sender).SelectionStart = 0;
+
+        }
+
+        private void maskedTextBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            ((MaskedTextBox)sender).SelectionStart = 0;
+
+        }
+
+        private void maskedTextBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            ((MaskedTextBox)sender).SelectionStart = 0;
+
         }
     }
 }

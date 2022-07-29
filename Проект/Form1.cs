@@ -411,14 +411,35 @@ namespace Проект
         {
             label7.Visible = true;
             label5.Visible = false;
-            maskedTextBox1.Enabled = true;
+           // maskedTextBox1.Enabled = true;
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             label8.Visible = true;
             label6.Visible = false;
-            maskedTextBox2.Enabled = true;
+            //maskedTextBox2.Enabled = true;
+
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void maskedTextBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            ((MaskedTextBox)sender).SelectionStart = 0;
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            ((MaskedTextBox)sender).SelectionStart = 0;
 
         }
     }
